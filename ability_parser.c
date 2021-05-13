@@ -1,13 +1,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <errno.h>
-#include <sys/types.h>          /* See NOTES */
 #include <sys/socket.h>
 #include <stdio.h>
 #include <string.h>
 
-int tmp;
 
 struct header{
 char * n;
@@ -23,7 +20,7 @@ int main(){
 	int entity_length;
 	FILE *f;
 	char *entity, *statusline, *tempptr, *strability;
-	char request[5000],response[10000],temp[1000];
+	char response[10000],temp[1000];
 	s =  socket(AF_INET, SOCK_STREAM, 0);
 	if ( s == -1 ){
 		perror("Socket fallita"); 
