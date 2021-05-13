@@ -107,9 +107,9 @@ int main(){
 					sscanf(strability,"ability%d",&n_abilities);
 					n_abilities++;
 				}
-				//If we parse a "player1" it means we're on a replay or something of sorts so we can't really tell which player we're looking at, set the number of abilities to 0 instead and break the loop
+				//If we parse a "player1" it means we're on a replay or something of sorts so we can't really tell which player we're looking at, set the number of abilities to 1 instead and break the loop
 				if(strstr(temp,"player1") != NULL){
-					n_abilities = 0;
+					n_abilities = 1;
 					break;
 				}
 				//Ignore previously scenario (always after abilities)
