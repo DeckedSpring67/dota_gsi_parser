@@ -133,6 +133,9 @@ int main(){
 					return 1;
 				}
 			}
+			else{
+				printf("Please provide %s\n",temp);
+			}
 		}
 		printf("Number of abilities: %d\n",n_abilities);
 		//Write success response
