@@ -104,7 +104,7 @@ int main(){
 					//printf("%s\n",strability);
 					//Get the ability number (when we exit the cycle it will always be the last one)
 					//+1 because, you know, that's the count not the position
-					sscanf(strability,"ability%d",&n_abilities);
+					//sscanf(strability,"ability%d",&n_abilities);
 					n_abilities++;
 				}
 				//If we parse a "player1" it means we're on a replay or something of sorts so we can't really tell which player we're looking at, set the number of abilities to 1 instead and break the loop
@@ -128,6 +128,7 @@ int main(){
 				fclose(f);
 				//Copy the file
 				sprintf(temp,"cp -f mask%d.png mask.png",n_abilities);
+				printf("Using: mask%d.png\n",n_abilities);
 				if(system(temp) < 0){
 					perror("copy failed");
 					return 1;
